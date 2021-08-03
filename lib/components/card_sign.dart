@@ -24,7 +24,7 @@ class CardSign extends StatelessWidget {
         }
 
         return Container(
-          margin: EdgeInsets.only(left: 20),
+          margin: EdgeInsets.only(left: 20, right: 100),
           height: 40,
           width: 220,
           color: Colors.grey,
