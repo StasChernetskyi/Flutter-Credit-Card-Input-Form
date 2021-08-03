@@ -12,7 +12,10 @@ class CardName extends StatelessWidget {
     final String name =
         Provider.of<CardNameProvider>(context).cardName.toUpperCase();
 
-    return Text(name.isNotEmpty ? name : defaultName,
-        style: name.isNotEmpty ? kNametextStyle : kDefaultNameTextStyle);
+    return Text(
+      name.isNotEmpty ? name : defaultName,
+      style: name.isNotEmpty ? kNametextStyle : kDefaultNameTextStyle,
+      textScaleFactor: 1.0,
+    );
   }
 }
