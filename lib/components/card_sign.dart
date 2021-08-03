@@ -24,7 +24,7 @@ class CardSign extends StatelessWidget {
         }
 
         return Container(
-          margin: EdgeInsets.only(left: 25),
+          margin: EdgeInsets.only(left: 20),
           height: 40,
           width: 220,
           color: Colors.grey,
@@ -32,6 +32,7 @@ class CardSign extends StatelessWidget {
             child: Text(
               cardName,
               style: kSignTextStyle,
+              textScaleFactor: 1.0,
             ),
           ),
         );

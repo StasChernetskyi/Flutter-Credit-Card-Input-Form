@@ -52,7 +52,7 @@ class BackCardView extends StatelessWidget {
           Align(
               alignment: Alignment.centerRight,
               child: Container(
-                margin: EdgeInsets.only(right: 30),
+                margin: EdgeInsets.only(right: 25),
                 child: CardCVV(),
               )),
           Align(
