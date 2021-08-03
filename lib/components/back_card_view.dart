@@ -34,7 +34,7 @@ class BackCardView extends StatelessWidget {
             child: Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  margin: EdgeInsets.only(right: 30),
+                  margin: EdgeInsets.only(right: 25),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7.5),
                     border: Border.all(
@@ -52,7 +52,7 @@ class BackCardView extends StatelessWidget {
           Align(
               alignment: Alignment.centerRight,
               child: Container(
-                margin: EdgeInsets.only(right: 30),
+                margin: EdgeInsets.only(right: 25),
                 child: CardCVV(),
               )),
           Align(
