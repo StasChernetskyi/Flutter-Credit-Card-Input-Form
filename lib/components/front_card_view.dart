@@ -37,6 +37,7 @@ class FrontCardView extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text(
                       captions.getCaption('CARDHOLDER_NAME').toUpperCase(),
@@ -55,6 +56,7 @@ class FrontCardView extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text(
                       captions.getCaption('VALID_THRU').toUpperCase(),

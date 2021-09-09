@@ -66,6 +66,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale("ar"),
       home: Scaffold(
         body: SafeArea(
           child: AnimatedContainer(
@@ -77,6 +78,7 @@ class _MyAppState extends State<MyApp> {
                   print(currentState);
                   print(cardInfo);
                 },
+                locale: Locale("ar"),
                 // initialAutoFocus: false,
                 // customCaptions: customCaptions,
                 // cardCVV: '222',
