@@ -33,45 +33,47 @@ class FrontCardView extends StatelessWidget {
             ),
             Align(alignment: Alignment.topRight, child: CardLogo()),
             Align(
-              alignment: Alignment.bottomLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Text(
-                      captions.getCaption('CARDHOLDER_NAME').toUpperCase(),
-                      style: kTextStyle,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text(
+                          captions.getCaption('CARDHOLDER_NAME').toUpperCase(),
+                          style: kTextStyle,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CardName(),
+                      ],
                     ),
-                    SizedBox(
-                      height: 10,
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text(
+                          captions.getCaption('VALID_THRU').toUpperCase(),
+                          style: kTextStyle,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CardValid(),
+                      ],
                     ),
-                    CardName(),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Text(
-                      captions.getCaption('VALID_THRU').toUpperCase(),
-                      style: kTextStyle,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    CardValid(),
-                  ],
-                ),
-              ),
-            )
           ],
         ),
       ),
