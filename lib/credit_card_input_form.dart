@@ -22,25 +22,27 @@ typedef CardInfoCallback = void Function(
     InputState currentState, CardInfo cardInfo);
 
 class CreditCardInputForm extends StatelessWidget {
-  CreditCardInputForm(
-      {this.onStateChange,
-      this.cardHeight,
-      this.frontCardDecoration,
-      this.backCardDecoration,
-      this.showResetButton = true,
-      this.customCaptions,
-      this.cardNumber = '',
-      this.cardName = '',
-      this.cardCVV = '',
-      this.cardValid = '',
-      this.initialAutoFocus = true,
-      this.intialCardState = InputState.NUMBER,
-      this.nextButtonTextStyle = kDefaultButtonTextStyle,
-      this.prevButtonTextStyle = kDefaultButtonTextStyle,
-      this.resetButtonTextStyle = kDefaultButtonTextStyle,
-      this.nextButtonDecoration = defaultNextPrevButtonDecoration,
-      this.prevButtonDecoration = defaultNextPrevButtonDecoration,
-      this.resetButtonDecoration = defaultResetButtonDecoration});
+  CreditCardInputForm({
+    this.onStateChange,
+    this.cardHeight,
+    this.frontCardDecoration,
+    this.backCardDecoration,
+    this.showResetButton = true,
+    this.customCaptions,
+    this.cardNumber = '',
+    this.cardName = '',
+    this.cardCVV = '',
+    this.cardValid = '',
+    this.initialAutoFocus = true,
+    this.intialCardState = InputState.NUMBER,
+    this.nextButtonTextStyle = kDefaultButtonTextStyle,
+    this.prevButtonTextStyle = kDefaultButtonTextStyle,
+    this.resetButtonTextStyle = kDefaultButtonTextStyle,
+    this.nextButtonDecoration = defaultNextPrevButtonDecoration,
+    this.prevButtonDecoration = defaultNextPrevButtonDecoration,
+    this.resetButtonDecoration = defaultResetButtonDecoration,
+    this.locale,
+  });
 
   final Function onStateChange;
   final double cardHeight;
@@ -60,6 +62,7 @@ class CreditCardInputForm extends StatelessWidget {
   final String cardValid;
   final initialAutoFocus;
   final InputState intialCardState;
+  final Locale locale;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +84,8 @@ class CreditCardInputForm extends StatelessWidget {
           create: (context) => CardCVVProvider(cardCVV),
         ),
         Provider(
-          create: (_) => Captions(customCaptions: customCaptions),
+          create: (_) =>
+              Captions(customCaptions: customCaptions, locale: locale),
         ),
       ],
       child: CreditCardInputImpl(

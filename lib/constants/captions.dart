@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Captions {
   final Map<String, String> _default = {
     'PREV': 'Prev',
@@ -12,11 +14,28 @@ class Captions {
     'RESET': 'Reset',
   };
 
+  final Map<String, String> _defaultAr = {
+    'PREV': 'السّابق',
+    'NEXT': 'التّالي',
+    'DONE': 'العمليّة نُفّذت ',
+    'CARD_NUMBER': 'رقم البطاقة',
+    'CARDHOLDER_NAME': 'اسم حامل البطاقة ',
+    'VALID_THRU': 'صالحة لغاية',
+    'SECURITY_CODE_CVC': 'الشّيفرة السّرّيّة في ظهر البطاقة',
+    'NAME_SURNAME': 'الاسم الأوّل و اسم العائلة',
+    'MM_YY': 'شهر/سنة',
+    'RESET': 'اعادة تحميل',
+  };
+
   Map<String, String> _captions;
 
-  Captions({customCaptions}) {
+  Captions({customCaptions, Locale locale}) {
     _captions = {};
-    _captions.addAll(_default);
+    if (locale == Locale("ar")) {
+      _captions.addAll(_defaultAr);
+    } else {
+      _captions.addAll(_default);
+    }
     if (customCaptions != null) _captions.addAll(customCaptions);
   }
 
