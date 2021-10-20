@@ -35,15 +35,12 @@ class CardValid extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Text(
-            inputCardValid,
-            style: kValidtextStyle,
+            inputCardValid.isNotEmpty ? inputCardValid : defaultCardValid,
+            style: inputCardValid.isNotEmpty
+                ? kValidtextStyle
+                : kDefaultValidTextStyle,
+            textScaleFactor: 1.0,
           ),
-          inputCardValid == ""
-              ? Text(
-                  defaultCardValid,
-                  style: kDefaultValidTextStyle,
-                )
-              : Container(),
         ],
       ),
     );
