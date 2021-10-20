@@ -23,7 +23,7 @@ class Captions {
     'VALID_THRU': 'صالحة لغاية',
     'SECURITY_CODE_CVC': 'الشّيفرة السّرّيّة في ظهر البطاقة',
     'NAME_SURNAME': 'الاسم الأوّل و اسم العائلة',
-    'MM_YY': 'MM/YY',
+    'MM_YY': 'شهر/سنة',
     'RESET': 'اعادة تحميل',
   };
 
