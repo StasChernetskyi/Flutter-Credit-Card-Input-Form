@@ -30,18 +30,19 @@ class CardValid extends StatelessWidget {
     }
 
     return Container(
-        child: Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: <Widget>[
-        Text(
-          inputCardValid,
-          style: kValidtextStyle,
-        ),
-        Text(
-          defaultCardValid,
-          style: kDefaultValidTextStyle,
-        )
-      ],
-    ));
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          Text(
+            inputCardValid.isNotEmpty ? inputCardValid : defaultCardValid,
+            style: inputCardValid.isNotEmpty
+                ? kValidtextStyle
+                : kDefaultValidTextStyle,
+            textScaleFactor: 1.0,
+          ),
+        ],
+      ),
+    );
   }
 }
